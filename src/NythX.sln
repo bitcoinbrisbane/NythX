@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NythX.Client", "NythX.Client\NythX.Client.csproj", "{4D13DF97-C74D-4646-BA33-1E8AB9211EC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{AC7A884F-A013-4844-8DEE-BB22F239BA6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{4D13DF97-C74D-4646-BA33-1E8AB9211EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D13DF97-C74D-4646-BA33-1E8AB9211EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D13DF97-C74D-4646-BA33-1E8AB9211EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7A884F-A013-4844-8DEE-BB22F239BA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7A884F-A013-4844-8DEE-BB22F239BA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7A884F-A013-4844-8DEE-BB22F239BA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7A884F-A013-4844-8DEE-BB22F239BA6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

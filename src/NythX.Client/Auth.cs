@@ -6,7 +6,7 @@ using NythX.Client.DTOs;
 
 namespace NythX.Client
 {
-    public class Auth : Client
+    public class Auth
     {
         private readonly string _api = "https://api.mythx.io/v1";
         private readonly string _path = "/auth/login";
