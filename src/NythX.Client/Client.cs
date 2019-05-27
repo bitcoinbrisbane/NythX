@@ -44,7 +44,7 @@ namespace NythX.Client
             }
         }
         
-        public async Task<String> Get(Guid uuid)
+        public async Task<DTOs.AnalysisResult> Get(Guid uuid)
         {
             using (var client = new HttpClient())
             {
@@ -52,8 +52,19 @@ namespace NythX.Client
                     new AuthenticationHeaderValue("Bearer", _access);
                 
                 var result = await client.GetStringAsync(_api + "/analyses/" + uuid);
-                return result;
-                //return Newtonsoft.Json.JsonConvert.DeserializeObject<DTOs.AnalysisResult>(result);
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<DTOs.AnalysisResult>(result);
+            }
+        }
+        
+        public async Task<DTOs.AnalysisResult> Issues(Guid uuid)
+        {
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", _access);
+                
+                var result = await client.GetStringAsync(_api + "/analyses/" + uuid + "/issues");
+                return Newtonsoft.Json.JsonConvert.DeserializeObject<DTOs.AnalysisResult>(result);
             }
         }
     }
