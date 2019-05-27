@@ -8,12 +8,12 @@ namespace NythX.Client
 {
     public class Auth
     {
-        private readonly string _api = "https://api.mythx.io/v1";
-        private readonly string _path = "/auth/login";
+        private static string _api = "https://api.mythx.io/v1";
+        private static string _path = "/auth/login";
         
-        public async Task<LoginResult> Login(String ethAddress, String password)
+        public static async Task<LoginResult> Login(String ethAddress, String password)
         {
-            DTOs.LoginRequest request = new LoginRequest() { EthAddress = ethAddress, Password = password };
+            LoginRequest request = new LoginRequest() { EthAddress = ethAddress, Password = password };
             
             using (var client = new HttpClient())
             {
